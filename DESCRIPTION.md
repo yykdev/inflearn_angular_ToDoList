@@ -134,7 +134,7 @@ chunk {vendor} vendor.js, vendor.js.map (vendor) 3.67 MB [initial] [rendered]
 
 -----
 
-## angular cli module 생성
+## angular cli 로 module 생성
 
 > ➜  todo-app git:(master) ng generate module todo  
 > CREATE src/app/todo/todo.module.ts (188 bytes)
@@ -149,5 +149,63 @@ src/app
 └── todo
     └── todo.module.ts
 ```
+
+-----
+
+## aungular cli 로 모듈 컴포넌트 생성
+
+> ng g c todo/todos --module todo/todo.module.ts --export  
+> g : generate  
+> c : component  
+> --module 모듈 --export : 현재 생성하는 모듈을 특정 모듈에서 사용 할 수 있도록 export 까지 연결
+
+```
+src/app/todo
+├── todo.module.ts
+└── todos
+    ├── todos.component.css
+    ├── todos.component.html
+    ├── todos.component.spec.ts
+    └── todos.component.ts
+```
+
+todos.component.ts
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-todos',
+  templateUrl: './todos.component.html',
+  styleUrls: ['./todos.component.css']
+})
+export class TodosComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+todo.module.ts
+```typescript
+
+...
+
+import { TodosComponent } from './todos/todos.component';
+
+@NgModule({
+  declarations: [TodosComponent],
+  
+  ...
+
+  exports: [TodosComponent]
+})
+export class TodoModule { }
+
+```
+
+> 하위 모듈 생성과 동시에 특정 모듈에 자동으로 연결 해준다.
 
 -----
