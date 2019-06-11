@@ -13,5 +13,5 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
-let g = new Greeting();
+const g = new Greeting();
 g.sayHello('nouveau');
