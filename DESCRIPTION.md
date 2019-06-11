@@ -34,3 +34,4 @@ assets 디렉토리 : 이미지 등의 정적 파일
 
 environments 디렉토리 : 배포 관련 정보
 
+main.ts : 프로젝트의 메인 파일
