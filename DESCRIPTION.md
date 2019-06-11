@@ -2,3 +2,7 @@
 
 angular cli 설치
 1. sudo npm install -g @angular/cli
+
+
+angular 프로젝트 생성
+1. ng new todo-app
