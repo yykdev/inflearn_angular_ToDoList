@@ -1,14 +1,19 @@
 # 일단 막 작성 후 정리
 
-### # angular cli 설치
+## angular cli 설치
 1. sudo npm install -g @angular/cli
 
 
-### # angular 프로젝트 생성
+-----
+
+## angular 프로젝트 생성
+
 1. ng new todo-app
 
+-----
 
-### # 앱 디렉토리 구조
+## 앱 디렉토리 구조
+
 ```
 src
  ├── app
@@ -37,7 +42,10 @@ src
 - main.ts : 프로젝트의 메인 파일
 
 
-### # version 확인
+-----
+
+## version 확인
+
 ```
 ➜  todo-app git:(master) ng --version 
 
@@ -58,8 +66,9 @@ Angular: 8.0.0
 ... router
 ```
 
+-----
 
-### ng 소스 빌드
+## ng 소스 빌드
 
 ng serve
 
@@ -83,7 +92,9 @@ chunk {vendor} vendor.js, vendor.js.map (vendor) 3.67 MB [initial] [rendered]
 ℹ ｢wdm｣: Compiled successfully.
 ```
 
-### ng cli 도움말
+-----
+
+## ng cli 도움말
 
 > ng help
 
@@ -121,4 +132,22 @@ chunk {vendor} vendor.js, vendor.js.map (vendor) 3.67 MB [initial] [rendered]
 
 > For more detailed help run "ng [command name] --help"
 
+-----
 
+## angular cli module 생성
+
+> ➜  todo-app git:(master) ng generate module todo  
+> CREATE src/app/todo/todo.module.ts (188 bytes)
+
+```
+src/app
+├── app.component.css
+├── app.component.html
+├── app.component.spec.ts
+├── app.component.ts
+├── app.module.ts
+└── todo
+    └── todo.module.ts
+```
+
+-----
