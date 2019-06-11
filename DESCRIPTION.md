@@ -1,14 +1,14 @@
 # 일단 막 작성 후 정리
 
-### angular cli 설치
+### # angular cli 설치
 1. sudo npm install -g @angular/cli
 
 
-### angular 프로젝트 생성
+### # angular 프로젝트 생성
 1. ng new todo-app
 
 
-### 앱 디렉토리 구조
+### # 앱 디렉토리 구조
 ```
 src
  ├── app
@@ -28,16 +28,38 @@ src
  ├── styles.css
  └── test.ts
 ```
-app 디렉토리 : 어플리케이션과 관련 된 파일 저장
+- app 디렉토리 : 어플리케이션과 관련 된 파일 저장
 
-assets 디렉토리 : 이미지 등의 정적 파일
+- assets 디렉토리 : 이미지 등의 정적 파일
 
-environments 디렉토리 : 배포 관련 정보
+- environments 디렉토리 : 배포 관련 정보
 
-main.ts : 프로젝트의 메인 파일
+- main.ts : 프로젝트의 메인 파일
 
 
-### 소스 빌드
+### # version 확인
+```
+➜  todo-app git:(master) ng --version 
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+    
+
+Angular CLI: 8.0.2
+Node: 10.16.0
+OS: darwin x64
+Angular: 8.0.0
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+```
+
+
+### ng 소스 빌드
 
 ng serve
 
@@ -98,3 +120,5 @@ chunk {vendor} vendor.js, vendor.js.map (vendor) 3.67 MB [initial] [rendered]
   `xi18n` : Extracts i18n messages from source code.
 
 > For more detailed help run "ng [command name] --help"
+
+
