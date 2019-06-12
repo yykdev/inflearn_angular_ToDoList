@@ -5,11 +5,10 @@
 
 <div>
   <div *ngFor="let todo of todos" (click)="toggleDone(todo)">
-    <input type="checkbox" [checked]="todo.done"> {{ todo.text }}
+    <app-todo [todo]="todo"></app-todo>
   </div>
 </div>
 
 <div>
-  <input type="text" name="" id="" placeholder="할 일 추가" [(ngModel)]="newText">
-  <button (click)="addTodo(newText)">ADD</button>
+  <app-add-todo (onTodoAdded)="addTodo($event)"></app-add-todo>
 </div>
