@@ -209,3 +209,9 @@ export class TodoModule { }
 > 하위 모듈 생성과 동시에 특정 모듈에 자동으로 연결 해준다.
 
 -----
+
+## Component
+
+- HTML 요소들의 그룹
+- 뷰와 로직으로 구성
+
