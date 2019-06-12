@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-todo',
   template: `
-    <p>
-      todo works!
-    </p>
+    <input type="checkbox"> 운동하기
   `,
   styles: []
 })

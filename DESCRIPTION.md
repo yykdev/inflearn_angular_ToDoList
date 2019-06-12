@@ -152,7 +152,7 @@ src/app
 
 -----
 
-## aungular cli 로 모듈 컴포넌트 생성
+## aungular cli 로 모듈 component 생성
 
 > ➜  todo-app git:(master) ng g c todo/todos --module todo/todo.module.ts --export  
 > g : generate  
@@ -212,7 +212,7 @@ export class TodoModule { }
 
 -----
 
-## aungular cli 로 모듈 inline 컴포넌트 생성
+## aungular cli 로 모듈 inline component 생성
 
 > todo-app git:(master) ng g c todo/todos/todo --inline-template --inline-style 
 > g : generate  
