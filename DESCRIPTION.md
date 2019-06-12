@@ -317,3 +317,19 @@ export class TodosComponent implements OnInit {
 ```
 <div *ngFor="let todo of todos" (click)="toggleDone(todo)">
 ```
+
+------
+
+## 데이터 바인딩
+
+### *ngModel* 지시자
+
+> ngModel 지시자는 입력박스와 같은 폼 컨틀롤과 양방향 데이터 바인딩을 지원 한다.
+
+```
+<input type="text" name="" id="" placeholder="할 일 추가" [(ngModel)]="newText">
+
+[(ngModel)]와 같이 지시자를 [()]로 호출하여 데이터 바인딩을 위한 Component 내에 선언 된 모델 명을 기입 하면 해당 모델과 양방향 데이터 바인딩을 진행 하게 된다.
+```
+
+[참고 : https://dschci.tistory.com/84](https://dschci.tistory.com/84)
