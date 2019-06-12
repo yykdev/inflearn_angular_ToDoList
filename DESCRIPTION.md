@@ -154,7 +154,7 @@ src/app
 
 ## aungular cli 로 모듈 컴포넌트 생성
 
-> ng g c todo/todos --module todo/todo.module.ts --export  
+> ➜  todo-app git:(master) ng g c todo/todos --module todo/todo.module.ts --export  
 > g : generate  
 > c : component  
 > --module 모듈 --export : 현재 생성하는 모듈을 특정 모듈에서 사용 할 수 있도록 export 까지 연결
@@ -169,7 +169,8 @@ src/app/todo
     └── todos.component.ts
 ```
 
-todos.component.ts
+> todos.component.ts
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 
@@ -188,7 +189,8 @@ export class TodosComponent implements OnInit {
 }
 ```
 
-todo.module.ts
+> todo.module.ts
+
 ```typescript
 
 ...
@@ -210,8 +212,53 @@ export class TodoModule { }
 
 -----
 
+## aungular cli 로 모듈 inline 컴포넌트 생성
+
+> todo-app git:(master) ng g c todo/todos/todo --inline-template --inline-style 
+> g : generate  
+> c : component  
+> --inline-template : 로직(ts) 내에 템플릿 요소를 셋팅 하겠다.  
+> --inline-style : 로직(ts) 내에 css 요소를 셋팅 하겠다.  
+
+```
+src/app/todo
+├── todo.module.ts
+└── todos
+    ├── todo
+    │   ├── todo.component.spec.ts
+    │   └── todo.component.ts
+    ├── todos.component.css
+    ├── todos.component.html
+    ├── todos.component.spec.ts
+    └── todos.component.ts
+```
+
+`--inline-template, --inline-style 옵션들로 인해 컴포넌트 디렉토리 내에 html, css 파일이 생성 되지 않고 로직(ts) 내의 Componet 제너레이터에 옵션으로 생성 됨`
+
+> todo.component.ts
+```typescript
+@Component({
+  selector: 'app-todo',
+  template: `
+    <p>
+      todo works!
+    </p>
+  `,
+  styles: []
+})
+export class TodoComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+```
+
+-----
+
 ## Component
 
 - HTML 요소들의 그룹
 - 뷰와 로직으로 구성
-
