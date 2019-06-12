@@ -4,7 +4,7 @@
 </div>
 
 <div>
-  <div *ngFor="let todo of todos" [click]="todo.done = !todo.done">
+  <div *ngFor="let todo of todos" (click)="todo.done = !todo.done">
     <input type="checkbox" [checked]="todo.done"> {{ todo.text }}
   </div>
 </div>
