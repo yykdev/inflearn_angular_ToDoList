@@ -22,4 +22,8 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleDone(todo) {
+    todo.done = !todo.done
+  }
+
 }

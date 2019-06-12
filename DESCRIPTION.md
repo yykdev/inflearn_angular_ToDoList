@@ -278,7 +278,7 @@ export class TodoComponent implements OnInit {
 
 ## 이벤트 바인딩
 
-> 특정 돔 요소에 이벤트를 주는 행위. 클릭, 마우스오버 뭐 기타 등등.
+### *특정 돔 요소에 이벤트를 주는 행위. 클릭, 마우스오버 뭐 기타 등등.*
 
 ```
 <div *ngFor="let todo of todos" (click)="이벤트 문장">
@@ -286,7 +286,7 @@ export class TodoComponent implements OnInit {
 => div 요소를 클릭( (click) ) 할 경우 "이벤트 문장"에 해당 하는 행위를 진행 하겠다.
 ```
 
-> 토글링 실습
+### *토글링 실습*
 
 ```
 (click)="todo.done = !todo.done"
@@ -294,4 +294,26 @@ export class TodoComponent implements OnInit {
 => 클릭 할 때마다 현재 done의 값의 반대 값을 바인딩 하겠다.
 
 true => false , false => true
+```
+
+### *이벤트 바인딩 메소드 처리*
+
+> 현재 html 템플릿을 렌더링 하는 컴포넌트에 메소드 생성
+
+```
+export class TodosComponent implements OnInit {
+
+  ...
+
+  toggleDone(todo) {
+    todo.done = !todo.done
+  }
+
+}
+```
+
+> 컴포넌트에 생성한 메소드를 이벤트 바인딩
+
+```
+<div *ngFor="let todo of todos" (click)="toggleDone(todo)">
 ```
