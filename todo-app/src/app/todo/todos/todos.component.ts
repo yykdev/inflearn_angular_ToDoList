@@ -28,4 +28,13 @@ export class TodosComponent implements OnInit {
     todo.done = !todo.done
   }
 
+  addTodo(newText: string) {
+    this.todos.push({
+      done: false,
+      text: newText
+    });
+
+    this.newText = '';
+  }
+
 }

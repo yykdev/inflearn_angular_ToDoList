@@ -318,6 +318,33 @@ export class TodosComponent implements OnInit {
 <div *ngFor="let todo of todos" (click)="toggleDone(todo)">
 ```
 
+### *할 일(ToDo) 추가 기능*
+
+> 입력 된 할일 Text 를 받아 할일 리스트에 추가하고, 데이터 바인딩을 위한 모델(newText)의 초기화 진행
+
+```
+export class TodosComponent implements OnInit {
+
+  ...
+
+  addTodo(newText: string) {
+    this.todos.push({
+      done: false,
+      text: newText
+    });
+
+    this.newText = '';
+  }
+
+}
+```
+
+> 버튼 요소에 할일추가 클릭 이벤트 바인딩
+
+```
+<button (click)="addTodo(newText)">ADD</button>
+```
+
 ------
 
 ## 데이터 바인딩
