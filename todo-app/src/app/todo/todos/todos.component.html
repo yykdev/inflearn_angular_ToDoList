@@ -4,13 +4,8 @@
 </div>
 
 <div>
-  <div>
-    <!-- <app-todo></app-todo> -->
-    <input type="checkbox" [checked]="todos[0].done"> {{ todos[0].text }}
-  </div>
-  <div>
-    <!-- <app-todo></app-todo> -->
-    <input type="checkbox" [checked]="todos[1].done"> {{ todos[1].text }}
+  <div *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.done"> {{ todo.text }}
   </div>
 </div>
 
