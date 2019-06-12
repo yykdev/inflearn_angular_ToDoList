@@ -286,3 +286,12 @@ export class TodoComponent implements OnInit {
 => div 요소를 클릭( [click] ) 할 경우 "이벤트 문장"에 해당 하는 행위를 진행 하겠다.
 ```
 
+> 토글링 실습
+
+```
+[click]="todo.done = !todo.done"
+
+=> 클릭 할 때마다 현재 done의 값의 반대 값을 바인딩 하겠다.
+
+true => false , false => true
+```
