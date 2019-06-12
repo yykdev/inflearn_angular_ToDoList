@@ -367,9 +367,15 @@ export class TodosComponent implements OnInit {
 > 템플릿에서 보이는 데이터를 변환 해줌
 
 ### *사용법*
+
+> {{ express | pipName: paramValue }}
+
 ```
-- {{ express | pipName: paramValue }}
+- date 형식으로 포팅
    ex) {{ today | date }}
    ex) {{ today | date:"yy/mm/dd" }}
    ex) {{ today | date | uppercase }}
+
+- json 형식으로 포팅
+   ex) {{ todos | json }}
 ```

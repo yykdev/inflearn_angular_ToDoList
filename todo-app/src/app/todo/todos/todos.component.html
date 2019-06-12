@@ -1,6 +1,6 @@
 <div class="title">
   <h1>나의 하루</h1>
-  <h2>6월 12일</h2>
+  <h2>{{ today|date:'yyyy년 M월 d일' }}</h2>
 </div>
 
 <div>
@@ -12,3 +12,5 @@
 <div>
   <app-add-todo (onTodoAdded)="addTodo($event)"></app-add-todo>
 </div>
+
+<!-- {{ todos | json }} -->
