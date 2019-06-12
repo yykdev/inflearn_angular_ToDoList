@@ -258,7 +258,31 @@ export class TodoComponent implements OnInit {
 
 -----
 
-## Component
+## *ngFor="let todo of todos"
 
-- HTML 요소들의 그룹
-- 뷰와 로직으로 구성
+> *ngFor
+
+```
+*ngFor는 Angular 지시자로서 특정 배열 인스턴스의 내용을 변수에 담고, 배열의 길이 만큼 지시자가 사용된 템플릿 요소를 반복 생성 하겠다는 것을 의미
+
+*ngFor="let todo of todos"
+
+=> todos 리스트의 값을 순회 하며 todo 변수에 담아 반복 하겠다.
+```
+
+> 그 외의 지시자는 도큐먼트 참고 하기.
+
+> 굳이 파이썬과 비교 하자면 for todo in todos: 와 같은 용도라 생각 하면 됨
+
+-----
+
+## 이벤트 바인딩
+
+> 특정 돔 요소에 이벤트를 주는 행위. 클릭, 마우스오버 뭐 기타 등등.
+
+```
+<div *ngFor="let todo of todos" [click]="이벤트 문장">
+
+=> div 요소를 클릭( [click] ) 할 경우 "이벤트 문장"에 해당 하는 행위를 진행 하겠다.
+```
+
