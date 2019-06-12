@@ -360,3 +360,16 @@ export class TodosComponent implements OnInit {
 ```
 
 [참고 : https://dschci.tistory.com/84](https://dschci.tistory.com/84)
+
+
+## Pipe ( 파이프 )
+
+> 템플릿에서 보이는 데이터를 변환 해줌
+
+### *사용법*
+```
+- {{ express | pipName: paramValue }}
+   ex) {{ today | date }}
+   ex) {{ today | date:"yy/mm/dd" }}
+   ex) {{ today | date | uppercase }}
+```
