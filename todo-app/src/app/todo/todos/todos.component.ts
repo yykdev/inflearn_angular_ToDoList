@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  constructor() { }
+  todos: {
+    done: boolean,
+    text: string
+  }[];
+
+  constructor() { 
+    this.todos = [
+      { done: false, text: "운동하기" },
+      { done: false, text: "공부하기" }
+    ]
+  }
 
   ngOnInit() {
   }
